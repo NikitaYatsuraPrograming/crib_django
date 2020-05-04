@@ -1,0 +1,9 @@
+{% extends 'layout/basic.html' %}
+{% block title %}Добавления объявления - Доска объявлений{% endblock %}
+{% block content %}
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input class="submit" type="submit" value="Добавить">
+    </form>
+{% endblock %}

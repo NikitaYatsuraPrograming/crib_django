@@ -1,0 +1,23 @@
+{% extends 'layout/basic.html' %}
+{% block title %}Главная{% endblock %}
+{% block content %}
+    {% for bb in bbs %}
+        <div>
+            <h1>{{ bb.title_and_price }}</h1>
+            <a href="{% url 'bboard:detail' bb.pk %}"><h2>{{ bb.title }}</h2></a>
+            <p>{{ bb.content|truncatechars:10}}</p>
+            <p>{{ bb.publisher|date:"d.m.Y H:i:s" }}</p>
+        </div>
+    {% endfor %}
+    <div>
+        {% if page.has_previous %}
+            <a href="?page={{ page.previous_page_number }}">&lt;</a>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+        {% endif %}
+        Часть №{{ page.number }} из {{ page.paginator.num_pages }}
+        {% if page.has_next %}
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="?page={{ page.next_page_number }}">&gt;</a>
+        {% endif %}
+    </div>
+{% endblock %}

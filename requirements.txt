@@ -1,0 +1,6 @@
+django
+django-simple-captcha>=0.5.12
+django-precise-bbcode
+django-bootstrap4
+djangorestframework
+django-cors-headers

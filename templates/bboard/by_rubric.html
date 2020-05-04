@@ -1,0 +1,12 @@
+{% extends 'layout/basic.html' %}
+{% block title %}{{ current_rubric.name }}{% endblock %}
+    {% block rubric %} <h2>Рубкика: {{ current_rubric.name }}</h2> {% endblock %}
+{% block content %}
+    {% for bb in bbs %}
+        <div>
+            <h2>{{ bb.title }}</h2>
+            <p>{{ bb.content }}</p>
+            <p>{{ bb.publisher|date:"d.m.Y H:i:s" }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

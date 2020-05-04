@@ -1,0 +1,24 @@
+h1 {color: #ffab42}
+
+header h1 {
+    color: #000000;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+    background: #ffab42;
+}
+
+nav{
+    font-size: 16px;
+    width: 150px;
+    float: left;
+}
+
+nav a {
+    display: block;
+    margin: 10px 0;
+}
+
+section{
+    margin-left: 170px;
+}

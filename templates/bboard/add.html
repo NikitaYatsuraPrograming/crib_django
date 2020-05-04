@@ -1,0 +1,7 @@
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <p>{{ test }}</p>
+    <div><img src="{{ img.img.url }}" alt=""></div>
+    <input type="submit" value="Сохранить">
+</form>
